@@ -1,0 +1,9 @@
+# The dsh-chat-image bundle patch: one row that is simultaneously a host row
+# (the Loader mounts the node half, which registers the chat-image route) and,
+# through the package's dsh.client declaration, a browser-roster row (the
+# client-modules service scans the manifest into window.__DSH_BOOT__ and serves
+# the /plugins/dsh-chat-image/client.js bundle).
+
+- insert:
+    - id: chat-image
+      name: dsh-chat-image
