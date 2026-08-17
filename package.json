@@ -1,6 +1,6 @@
 {
   "name": "dsh-chat-image",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Renders chat Markdown image references (![alt](path title)) as a gallery under each closing assistant message",
   "keywords": [
     "dsh",
@@ -13,6 +13,13 @@
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niobium-41-nb/dsh-chat-image.git"
+  },
   "exports": {
     ".": {
       "types": "./lib/types/index.d.ts",
@@ -41,6 +48,7 @@
   "scripts": {
     "build": "tsdown && tsc -p tsconfig.json",
     "prepare": "npm run build",
+    "prepublishOnly": "npm run build && npm test",
     "test": "vitest run"
   },
   "devDependencies": {
