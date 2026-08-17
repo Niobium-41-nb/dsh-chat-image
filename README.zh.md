@@ -1,5 +1,10 @@
 # dsh-chat-image
 
+[![npm 版本](https://img.shields.io/npm/v/dsh-chat-image.svg)](https://www.npmjs.com/package/dsh-chat-image)
+[![GitHub](https://img.shields.io/badge/GitHub-Niobium--41--nb%2Fdsh--chat--image-blue.svg)](https://github.com/Niobium-41-nb/dsh-chat-image)
+
+[English](README.md) | 中文
+
 在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的 Web GUI 中，把聊天消息里的 Markdown 图片引用（`![alt](路径 title)`）渲染成助手回复下方的图片画廊。
 
 - **本地工作区路径** 通过经过校验的宿主路由（`/dsh-chat-image`）加载：路径必须解析到已注册工作区内、且为不超过 32 MiB 的普通文件；按扩展名返回对应的内容类型。
@@ -11,12 +16,17 @@
 
 ## 安装
 
-作为独立 bundle，在 dsh 安装环境中（npm / tarball / git）：
+作为独立 bundle，在 dsh 安装环境中：
 
 ```sh
-dsh plugin --profile web add dsh-chat-image        # 从 npm
+# 从 npm（发布后可用）
+dsh plugin --profile web add dsh-chat-image
+
+# 从 git 仓库
+dsh plugin --profile web add github:Niobium-41-nb/dsh-chat-image
+
+# 从 tarball
 dsh plugin --profile web add ./dsh-chat-image-0.1.0.tgz
-dsh plugin --profile web add github:you/dsh-chat-image
 ```
 
 git 安装会拉取源码并运行包的 `prepare` 构建；pnpm ≥ 10 需要为该脚本显式放行构建权限（`add` 的输出会打印需要加进 `pnpm-workspace.yaml` 的确切条目）。`web` profile 的浏览器花名册（`clientModules`）会通过 `dsh.client` 清单自动发现浏览器半边；Loader 通过 bundle patch 挂载宿主半边。

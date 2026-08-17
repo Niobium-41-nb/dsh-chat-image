@@ -1,5 +1,8 @@
 # dsh-chat-image
 
+[![npm version](https://img.shields.io/npm/v/dsh-chat-image.svg)](https://www.npmjs.com/package/dsh-chat-image)
+[![GitHub](https://img.shields.io/badge/GitHub-Niobium--41--nb%2Fdsh--chat--image-blue.svg)](https://github.com/Niobium-41-nb/dsh-chat-image)
+
 English | [中文](README.zh.md)
 
 Renders chat Markdown image references (`![alt](path title)`) as a gallery under each closing assistant message in the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) web GUI.
@@ -13,12 +16,17 @@ Renders chat Markdown image references (`![alt](path title)`) as a gallery under
 
 ## Install
 
-As a standalone bundle, from a dsh installation (npm, tarball, or git):
+As a standalone bundle, from a dsh installation:
 
 ```sh
-dsh plugin --profile web add dsh-chat-image        # from npm
+# from npm (once published)
+dsh plugin --profile web add dsh-chat-image
+
+# from the git repository
+dsh plugin --profile web add github:Niobium-41-nb/dsh-chat-image
+
+# from a tarball
 dsh plugin --profile web add ./dsh-chat-image-0.1.0.tgz
-dsh plugin --profile web add github:you/dsh-chat-image
 ```
 
 A git install fetches sources and runs the package's `prepare` build; pnpm ≥ 10 requires an explicit build allowance for that script (the `add` output prints the exact `pnpm-workspace.yaml` entry to add). The `web` profile's browser roster (`clientModules`) picks the browser half up automatically through the `dsh.client` manifest; the Loader mounts the host half through the bundle patch.
