@@ -48,7 +48,7 @@
   "scripts": {
     "build": "tsdown && tsc -p tsconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run build && npm test",
+    "prepublishOnly": "npm run build && node scripts/verify-bundle.mjs && npm test",
     "test": "vitest run"
   },
   "devDependencies": {
