@@ -9,8 +9,8 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
 const packageDir = dirname(fileURLToPath(import.meta.url))
-const patch = readFileSync(join(packageDir, 'cordis.patch.yml'), 'utf8')
-const manifest = JSON.parse(readFileSync(join(packageDir, 'package.json'), 'utf8'))
+const patch = readFileSync(join(packageDir, '..', 'cordis.patch.yml'), 'utf8')
+const manifest = JSON.parse(readFileSync(join(packageDir, '..', 'package.json'), 'utf8'))
 
 /** Pull every `name: '<pkg>'` row out of the patch (loader YAML uses single quotes). */
 const insertedNames = [...patch.matchAll(/^\s+name:\s*'([^']+)'/gm)].map((m) => m[1])
