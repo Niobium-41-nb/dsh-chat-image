@@ -19,7 +19,7 @@
 作为独立 bundle，在 dsh 安装环境中：
 
 ```sh
-# 从 npm（发布后可用）
+# 从 npm
 dsh plugin --profile web add dsh-chat-image
 
 # 从 git 仓库

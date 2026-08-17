@@ -19,7 +19,7 @@ Renders chat Markdown image references (`![alt](path title)`) as a gallery under
 As a standalone bundle, from a dsh installation:
 
 ```sh
-# from npm (once published)
+# from npm
 dsh plugin --profile web add dsh-chat-image
 
 # from the git repository
