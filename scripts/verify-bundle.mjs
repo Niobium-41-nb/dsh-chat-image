@@ -12,8 +12,8 @@ const packageDir = dirname(fileURLToPath(import.meta.url))
 const patch = readFileSync(join(packageDir, '..', 'cordis.patch.yml'), 'utf8')
 const manifest = JSON.parse(readFileSync(join(packageDir, '..', 'package.json'), 'utf8'))
 
-/** Pull every `name: '<pkg>'` row out of the patch (loader YAML uses single quotes). */
-const insertedNames = [...patch.matchAll(/^\s+name:\s*'([^']+)'/gm)].map((m) => m[1])
+/** Pull every `name: <pkg>` row out of the patch (single quotes optional). */
+const insertedNames = [...patch.matchAll(/^\s+name:\s*'?([^'\s#]+)/gm)].map((m) => m[1])
 
 if (insertedNames.length === 0) {
   console.error('bundle patch inserts no rows')
