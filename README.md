@@ -7,6 +7,8 @@ English | [中文](README.zh.md)
 
 Renders chat Markdown image references (`![alt](path title)`) as a gallery under each closing assistant message in the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) web GUI.
 
+![gallery preview](assets/gallery-preview.svg)
+
 - **Local workspace paths** load through a validated host route (`/dsh-chat-image`): the path must resolve inside a registered workspace and be a regular file of at most 32 MiB; the file is served with an extension-derived content type.
 - **http(s) references are skipped** — the built-in markdown renderer already shows them inline.
 - **`data:` URLs** render directly.

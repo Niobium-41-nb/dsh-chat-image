@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <!-- 背景：聊天流中的助手消息 + 图片画廊 -->
+  <rect x="0" y="0" width="760" height="360" rx="12" fill="#1c2029"/>
+  <rect x="30" y="24" width="700" height="46" rx="10" fill="#242936"/>
+  <text x="50" y="52" fill="#9aa4b5" font-size="13">UI 预览如下：</text>
+  <text x="50" y="60" fill="#5b6472" font-size="11" dx="0">![仪表盘](dashboard.png 仪表盘概览)</text>
+
+  <!-- 画廊卡片 -->
+  <rect x="30" y="90" width="700" height="246" rx="10" fill="#242936" stroke="#3a4150"/>
+  <rect x="30" y="90" width="700" height="38" rx="10" fill="#2a3040"/>
+  <rect x="30" y="112" width="700" height="16" fill="#2a3040"/>
+  <circle cx="50" cy="109" r="5" fill="#5b6472"/>
+  <text x="64" y="114" fill="#d6dbe4" font-size="13" font-weight="600">图片画廊 · 3 张</text>
+
+  <!-- 缩略图 1：仪表盘 -->
+  <rect x="50" y="146" width="196" height="128" rx="6" fill="#ffffff"/>
+  <rect x="70" y="166" width="80" height="10" rx="3" fill="#5b6472"/>
+  <rect x="70" y="184" width="60" height="40" rx="3" fill="#c9d2e0"/>
+  <rect x="138" y="184" width="40" height="40" rx="3" fill="#e4e9f1"/>
+  <rect x="70" y="232" width="120" height="10" rx="3" fill="#c9d2e0"/>
+  <rect x="70" y="248" width="100" height="8" rx="3" fill="#e4e9f1"/>
+  <text x="50" y="294" fill="#9aa4b5" font-size="11">仪表盘概览</text>
+
+  <!-- 缩略图 2：趋势图 -->
+  <rect x="282" y="146" width="196" height="128" rx="6" fill="#ffffff"/>
+  <polyline points="302,240 340,210 380,222 420,180 458,196" fill="none" stroke="#3a7bd5" stroke-width="3"/>
+  <rect x="302" y="252" width="130" height="8" rx="3" fill="#c9d2e0"/>
+  <rect x="302" y="266" width="100" height="8" rx="3" fill="#e4e9f1"/>
+  <text x="282" y="294" fill="#9aa4b5" font-size="11">月度趋势</text>
+
+  <!-- 缩略图 3：架构图 -->
+  <rect x="514" y="146" width="196" height="128" rx="6" fill="#ffffff"/>
+  <rect x="534" y="166" width="80" height="34" rx="4" fill="#c9d2e0"/>
+  <rect x="534" y="216" width="80" height="34" rx="4" fill="#e4e9f1"/>
+  <line x1="574" y1="200" x2="574" y2="216" stroke="#8a93a6" stroke-width="2"/>
+  <rect x="640" y="166" width="50" height="84" rx="4" fill="#d8e4f7"/>
+  <text x="514" y="294" fill="#9aa4b5" font-size="11">架构示意</text>
+</svg>
